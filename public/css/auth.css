@@ -1,0 +1,219 @@
+/* ═══════════════════════════════════════
+   auth.css — استایل صفحه لاگین و فراموشی رمز
+   ═══════════════════════════════════════ */
+
+/* ---------- انیمیشن ورود ---------- */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.anim-fade-up {
+    animation: fadeUp .5s ease both;
+}
+
+/* ---------- لیبل ---------- */
+.login-label {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    color: #4b5563;
+    /* gray-600 */
+    margin-bottom: 8px;
+    margin-right: 4px;
+}
+
+/* ---------- آیکون داخل اینپوت ---------- */
+.login-input-icon {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #d1d5db;
+    /* gray-300 */
+    pointer-events: none;
+}
+
+/* ---------- اینپوت ---------- */
+.login-input {
+    width: 100%;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    background-color: #FFFCF7;
+    /* cream-50 */
+    border: 2px solid #f3f4f6;
+    /* gray-100 */
+    border-radius: 12px;
+    font-size: 13px;
+    color: #374151;
+    /* gray-700 */
+    outline: none;
+    font-weight: 500;
+    transition: all .3s ease;
+}
+
+.login-input::placeholder {
+    color: #d1d5db;
+    /* gray-300 */
+}
+
+.login-input:focus {
+    border-color: #F97316;
+    /* brand-500 */
+    box-shadow: 0 0 0 3px rgba(249, 115, 22, .15);
+}
+
+/* ---------- دکمه نمایش رمز ---------- */
+.login-toggle-password {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #d1d5db;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: color .2s ease;
+}
+
+.login-toggle-password:hover {
+    color: #F97316;
+}
+
+/* ---------- چک‌باکس ---------- */
+.login-remember {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.login-checkbox {
+    width: 20px;
+    height: 20px;
+    border-radius: 6px;
+    border: 2px solid #e5e7eb;
+    /* gray-200 */
+    background-color: #FFFCF7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .2s ease;
+}
+
+/* ---------- لینک فراموشی رمز ---------- */
+.login-forgot-link {
+    font-size: 11px;
+    color: #F97316;
+    font-weight: 600;
+    transition: color .2s ease;
+    text-decoration: none;
+}
+
+.login-forgot-link:hover {
+    color: #C2570C;
+}
+
+/* ---------- دکمه ورود ---------- */
+.login-btn {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 800;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 8px;
+    background: linear-gradient(135deg, #FB8C3C 0%, #F97316 50%, #EA690C 100%);
+    transition: all .3s ease;
+}
+
+.login-btn:hover {
+    background: linear-gradient(135deg, #F97316 0%, #EA690C 50%, #C2570C 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 25px rgba(249, 115, 22, .35);
+}
+
+.login-btn:active {
+    transform: translateY(0);
+}
+
+.login-btn:disabled {
+    opacity: .75;
+    cursor: not-allowed;
+}
+
+/* ---------- پیام‌های هشدار ---------- */
+.login-alert {
+    border-radius: 12px;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.login-alert-error {
+    background-color: #fef2f2;
+    /* red-50 */
+    border: 1px solid #fecaca;
+    /* red-200 */
+}
+
+.login-alert-success {
+    background-color: #f0fdf4;
+    /* green-50 */
+    border: 1px solid #bbf7d0;
+    /* green-200 */
+}
+
+.login-alert-icon {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-alert-icon-error {
+    background-color: #fee2e2;
+    /* red-100 */
+    color: #E84033;
+}
+
+.login-alert-icon-success {
+    background-color: #dcfce7;
+    /* green-100 */
+    color: #16a34a;
+}
+
+/* ---------- لینک بازگشت ---------- */
+.login-back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: #9ca3af;
+    /* gray-400 */
+    font-weight: 500;
+    transition: color .2s ease;
+    text-decoration: none;
+}
+
+.login-back-link:hover {
+    color: #F97316;
+}

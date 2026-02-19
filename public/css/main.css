@@ -1,0 +1,263 @@
+/* ===== Reset ===== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ===== Modern Background ===== */
+body {
+    background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
+}
+
+/* ===== Category Slider بجای Scrollbar ===== */
+.cat-scroll::-webkit-scrollbar { display: none; }
+.cat-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+
+#catNav::-webkit-scrollbar { display: none; }
+#catNav { -webkit-overflow-scrolling: touch; }
+
+.cat-slider {
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide {
+    flex: 0 0 100%;
+}
+
+/* ===== Smooth Animations ===== */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { 
+        opacity: 0; 
+        transform: translateY(24px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+@keyframes scaleIn {
+    from { 
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ===== Header Animations ===== */
+@keyframes float {
+    0%, 100% { 
+        transform: translateY(0px) translateX(0px); 
+    }
+    25% { 
+        transform: translateY(-20px) translateX(10px); 
+    }
+    50% { 
+        transform: translateY(-10px) translateX(-10px); 
+    }
+    75% { 
+        transform: translateY(-25px) translateX(-5px); 
+    }
+}
+
+@keyframes float-delayed {
+    0%, 100% { 
+        transform: translateY(0px) translateX(0px); 
+    }
+    25% { 
+        transform: translateY(20px) translateX(-10px); 
+    }
+    50% { 
+        transform: translateY(10px) translateX(15px); 
+    }
+    75% { 
+        transform: translateY(25px) translateX(5px); 
+    }
+}
+
+@keyframes gradient-shift {
+    0%, 100% {
+        opacity: 1;
+        background-position: 0% 50%;
+    }
+    50% {
+        opacity: 0.9;
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes slide-in-right {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse-slow {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.05);
+    }
+}
+
+@keyframes bounce-slow {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes text-shimmer {
+    0% {
+        background-position: -200% center;
+    }
+    100% {
+        background-position: 200% center;
+    }
+}
+
+.animate-float {
+    animation: float 8s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+    animation: float-delayed 10s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+.animate-gradient-shift {
+    background-size: 200% 200%;
+    animation: gradient-shift 15s ease infinite;
+}
+
+.animate-slide-in-right {
+    animation: slide-in-right 0.8s ease-out;
+}
+
+.animate-slide-in-up {
+    animation: slide-in-up 1s ease-out 0.3s both;
+}
+
+.animate-pulse-slow {
+    animation: pulse-slow 3s ease-in-out infinite;
+}
+
+.animate-bounce-slow {
+    animation: bounce-slow 2s ease-in-out infinite;
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease-out 0.2s both;
+}
+
+.animate-text-shimmer {
+    background-size: 200% auto;
+    animation: text-shimmer 3s linear infinite;
+}
+
+/* ===== Header Image Effect ===== */
+.header-img {
+    animation: subtle-zoom 20s ease-in-out infinite;
+}
+
+@keyframes subtle-zoom {
+    0%, 100% {
+        transform: scaleX(-1) scale(1);
+    }
+    50% {
+        transform: scaleX(-1) scale(1.05);
+    }
+}
+
+.anim-card { 
+    animation: slideUp 0.5s ease-out both;
+}
+
+.anim-card:nth-child(1) { animation-delay: 0s }
+.anim-card:nth-child(2) { animation-delay: 0.08s }
+.anim-card:nth-child(3) { animation-delay: 0.16s }
+.anim-card:nth-child(4) { animation-delay: 0.24s }
+.anim-card:nth-child(5) { animation-delay: 0.32s }
+.anim-card:nth-child(6) { animation-delay: 0.40s }
+
+.anim-fade-up {
+    animation: slideUp 0.6s ease-out both;
+}
+
+.anim-scale {
+    animation: scaleIn 0.5s ease-out both;
+}
+
+/* ===== Header Logo ===== */
+.header-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ===== Smooth Transitions ===== */
+button, a, input, textarea, select {
+    transition: all 0.2s ease;
+}
+
+/* ===== Focus Styles ===== */
+input:focus, textarea:focus, select:focus {
+    outline: none;
+}
+
+/* ===== Scrollbar Styling ===== */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #28282B;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #1f1f22;
+}
+
+/* ===== Food Card Shadow Effect ===== */
+.anim-card:hover {
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18), 0 0 25px rgba(0, 0, 0, 0.12) !important;
+}

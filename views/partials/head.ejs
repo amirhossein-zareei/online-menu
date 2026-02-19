@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+     <head>
+          <meta charset="UTF-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title><%= typeof title !=='undefined' ? title : 'ArtaPack' %></title>
+          <link rel="icon" href="/images/favicon.ico" sizes="any" />
+          <script src="https://cdn.tailwindcss.com"></script>
+          <link
+               href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css"
+               rel="stylesheet"
+          />
+          <script>
+               tailwind.config = {
+                    theme: {
+                         extend: {
+                              fontFamily: { vazir: ["Vazirmatn", "Tahoma", "Arial", "sans-serif"] },
+                              colors: {
+                                   brand: {
+                                        50: "#FFF3F0",
+                                        100: "#FFE6DF",
+                                        200: "#FFC4B3",
+                                        300: "#FFA286",
+                                        400: "#FF7F59",
+                                        500: "#E65026",
+                                        600: "#CC3E1B",
+                                        700: "#A62D12",
+                                        800: "#8C2612",
+                                        900: "#732213",
+                                   },
+                              },
+                         },
+                    },
+               };
+          </script>
+          <link rel="stylesheet" href="/css/main.css" />
+     </head>
+
+     <body class="font-vazir bg-white text-gray-900 min-h-screen"></body>
+</html>

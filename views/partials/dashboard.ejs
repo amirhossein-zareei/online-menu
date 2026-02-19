@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+     <head>
+          <meta charset="UTF-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>ArtaPack | مدیریت منو</title>
+          <link rel="icon" href="/images/favicon.ico" sizes="any" />
+          <script src="https://cdn.tailwindcss.com"></script>
+          <link
+               href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css"
+               rel="stylesheet"
+          />
+          <script>
+               tailwind.config = {
+                    theme: {
+                         extend: {
+                              fontFamily: { vazir: ["Vazirmatn", "Tahoma", "Arial", "sans-serif"] },
+                              colors: {
+                                   brand: {
+                                        50: "#FFF3F0",
+                                        100: "#FFE6DF",
+                                        200: "#FFC4B3",
+                                        300: "#FFA286",
+                                        400: "#FF7F59",
+                                        500: "#E65026",
+                                        600: "#CC3E1B",
+                                        700: "#A62D12",
+                                        800: "#8C2612",
+                                        900: "#732213",
+                                   },
+                              },
+                         },
+                    },
+               };
+          </script>
+          <link rel="stylesheet" href="/css/main.css" />
+     </head>
+
+     <body class="font-vazir bg-white text-gray-900 min-h-screen">
+          <!-- Main Content -->
+          <main
+               class="px-4 sm:px-6 lg:px-[150px] pt-4 sm:pt-6 pb-16 sm:pb-20 min-h-screen w-full"
+               dir="rtl"
+          >
+               <div class="flex flex-col gap-6 sm:gap-8">
+                    <!-- Categories Bar -->
+                    <div
+                         class="sticky top-0 z-40 backdrop-blur-md bg-white/70 py-3 -mx-4 sm:-mx-6 lg:-mx-[150px] px-4 sm:px-6 lg:px-[150px]"
+                    >
+                         <div
+                              class="rounded-xl sm:rounded-2xl p-2.5 sm:p-4 shadow-lg"
+                              style="background: #1a1a1d"
+                         >
+                              <div class="flex items-center gap-3">
+                                   <div
+                                        class="flex gap-2 sm:gap-3 overflow-x-auto flex-1"
+                                        id="catNav"
+                                        style="scrollbar-width: none"
+                                   >
+                                        <!-- آیتم‌های دسته‌بندی از طریق جاوا اسکریپت اضافه می‌شوند -->
+                                   </div>
+
+                                   <!-- دکمه پروفایل -->
+                                   <a
+                                        href="/profile"
+                                        class="flex-shrink-0 inline-flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-all duration-200"
+                                        title="پروفایل"
+                                   >
+                                        <svg
+                                             class="w-4 h-4 sm:w-4.5 sm:h-4.5"
+                                             viewBox="0 0 24 24"
+                                             fill="none"
+                                             stroke="currentColor"
+                                             stroke-width="2"
+                                             stroke-linecap="round"
+                                             stroke-linejoin="round"
+                                        >
+                                             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                                             <circle cx="12" cy="7" r="4" />
+                                        </svg>
+                                   </a>
+
+                                   <!-- دکمه خروج -->
+                                   <a
+                                        href="/login"
+                                        class="flex-shrink-0 inline-flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-orange-600 text-white hover:bg-orange-700 transition-all duration-200"
+                                        title="خروج"
+                                   >
+                                        <svg
+                                             class="w-4 h-4 sm:w-4.5 sm:h-4.5"
+                                             viewBox="0 0 24 24"
+                                             fill="none"
+                                             stroke="currentColor"
+                                             stroke-width="2"
+                                             stroke-linecap="round"
+                                             stroke-linejoin="round"
+                                        >
+                                             <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+                                             <polyline points="10 17 15 12 10 7" />
+                                             <line x1="15" y1="12" x2="3" y2="12" />
+                                        </svg>
+                                   </a>
+                              </div>
+                         </div>
+                    </div>
+
+                    <!-- Menu Items Area -->
+                    <div class="w-full" id="menuBody">
+                         <!-- لودینگ اولیه -->
+                         <div class="flex flex-col items-center justify-center py-24 text-center">
+                              <div
+                                   class="w-12 h-12 border-4 border-gray-200 border-t-brand-500 rounded-full animate-spin"
+                              ></div>
+                              <p class="text-sm text-gray-500 mt-4 font-medium">
+                                   در حال بارگذاری منو...
+                              </p>
+                         </div>
+                    </div>
+               </div>
+          </main>
+
+          <!-- دکمه شناور -->
+          <button
+               onclick="openAddModal()"
+               id="fabAdd"
+               class="fixed z-50 bottom-4 sm:bottom-6 left-4 sm:left-5 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-brand-500 text-white shadow-xl shadow-brand-500/40 flex items-center justify-center hover:scale-110 hover:shadow-2xl hover:shadow-brand-500/50 active:scale-95 transition-all duration-300"
+               title="افزودن غذای جدید"
+          >
+               <svg
+                    class="w-6 h-6 sm:w-7 sm:h-7"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+               >
+                    <line x1="12" y1="5" x2="12" y2="19" />
+                    <line x1="5" y1="12" x2="19" y2="12" />
+               </svg>
+          </button>
+
+          <!-- مودال -->
+          <%- include('edit-food-modal') %>
+
+          <script src="/js/admin.js"></script>
+     </body>
+</html>

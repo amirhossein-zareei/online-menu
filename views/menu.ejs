@@ -1,0 +1,41 @@
+<%- include('partials/head', { title: 'ArtaPack | منو' }) %>
+    <%- include('partials/header') %>
+
+            <!-- Main Content -->
+            <main class="px-4 sm:px-6 lg:px-[150px] pt-4 sm:pt-6 pb-16 sm:pb-20 flex-1 w-full" dir="rtl" >
+                <div class="flex flex-col items-center gap-6 sm:gap-8">
+                    <!-- Categories Bar -->
+                    <div class="sticky top-0 z-50 w-full py-3 sm:py-4 bg-gradient-to-b from-white via-white to-transparent backdrop-blur-sm">
+                        <div class="max-w-7xl mx-auto px-4">
+                            <div class="flex items-center gap-3 sm:gap-4 bg-white rounded-full p-2 sm:p-3 shadow-2xl" style="box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15), 0 0 20px rgba(0, 0, 0, 0.1);">
+                                <!-- Categories -->
+                                <div class="flex-1 overflow-hidden">
+                                    <div class="flex gap-2 sm:gap-3 overflow-x-auto" id="catNav" style="scrollbar-width: none; -ms-overflow-style: none;">
+                                        <!-- آیتم‌های دسته‌بندی از طریق جاوا اسکریپت اضافه می‌شوند -->
+                                    </div>
+                                </div>
+                                
+                                <!-- Logo -->
+                                <div class="flex-shrink-0">
+                                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white shadow-md overflow-hidden flex items-center justify-center">
+                                        <img src="/images/generated-image.png" alt="ArtaPack" class="w-full h-full object-cover">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Menu Items Area -->
+                    <div class="w-full" id="menuBody">
+                        <!-- لودینگ اولیه -->
+                        <div class="flex flex-col items-center justify-center py-16 sm:py-24 text-center">
+                            <div class="w-12 h-12 border-4 border-gray-200 border-t-brand-500 rounded-full animate-spin"></div>
+                            <p class="text-sm text-gray-500 mt-4 font-medium">در حال بارگذاری منو...</p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <script src="/js/menu.js"></script>
+
+            <%- include('partials/footer') %>
